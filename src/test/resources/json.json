@@ -1,0 +1,57 @@
+{
+  "message": "\u0422\u043e\u0432\u0430\u0440 \u0434\u043e\u0431\u0430\u0432\u043b\u0435\u043d \u0432 \u043a\u043e\u0440\u0437\u0438\u043d\u0443",
+  "reload": false,
+  "redirect": "",
+  "needAuth": false,
+  "data": [
+    {
+      "saleMessage": null,
+      "isFavorite": false,
+      "bundle": false,
+      "image": "\/upload\/iblock\/8ba\/8baceeaff7519cbef790ec9b90be25c8.png@140?bgclr=ffffff",
+      "imageThumb": "\/upload\/iblock\/8ba\/8baceeaff7519cbef790ec9b90be25c8.png@64?bgclr=ffffff",
+      "imageDetail": "\/upload\/iblock\/8ba\/8baceeaff7519cbef790ec9b90be25c8.png",
+      "description": "\u0418\u0442\u0430\u043b\u0438\u044f, \u043a\u0440\u0430\u0441\u043d\u043e\u0435, \u0441\u0443\u0445\u043e\u0435, 2017\u00a0\u0433.",
+      "article": "138778",
+      "country": "\u0418\u0442\u0430\u043b\u0438\u044f",
+      "color": "\u043a\u0440\u0430\u0441\u043d\u043e\u0435",
+      "type": "\u0441\u0443\u0445\u043e\u0435",
+      "year": "2017&nbsp;\u0433.",
+      "volume": "0.75&nbsp;\u043b.",
+      "countUnit": 1,
+      "canonicalSectionUrl": "\/catalog\/vino\/",
+      "unificator": "138778",
+      "staticUnificator": "122710",
+      "id": 6378063,
+      "productId": 188300,
+      "name": "Sassi Chiusi",
+      "quantity": 1,
+      "price": 4076,
+      "base": 4290,
+      "url": "\/catalog\/product\/bertinga_sassi_chiusi_2017_075_138778\/",
+      "total": 4076,
+      "isPayOnlyCupons": false,
+      "isHideFromCatalog": false,
+      "ecomName": "White",
+      "isEcom": true,
+      "discount": 5,
+      "printQuantity": 1,
+      "inStock": true,
+      "inStockInNotWineries": true,
+      "stockAmount": 61,
+      "maxLimit": true,
+      "mile": 6437
+    }
+  ],
+  "extData": {
+    "minimal": {
+      "leftMoney": 0,
+      "percent": 100,
+      "minPrice": 2000
+    },
+    "flocktoryData": {
+      "basketScript": "window.flocktory = window.flocktory || [];\nwindow.flocktory.push(['updateCart', {\n  cart: {\n    items:[{\"id\":\"188300\",\"price\":4076,\"count\":1}]\n  }\n}]);\n    _paq.push(['trackEvent', 'event', 'cart', 'addToCart']);  "
+    },
+    "owox": "[{\"event\":\"OWOX\",\"eventCategory\":\"Conversions\",\"eventAction\":\"add\",\"eventLocation\":\"CATALOG_PAGE\",\"eventPosition\":\"1\",\"eventPortalName\":\"\",\"eventCategoryName\":\"\u0412\u0438\u043d\u043e\",\"eventCategoryId\":2,\"eventProductName\":\"Sassi Chiusi\",\"eventProductId\":188300,\"eventProductPrice\":\"4290.00\",\"eventLabel\":\"cart | Sassi Chiusi | 5\",\"ecommerce\":{\"currencyCode\":\"RUB\",\"add\":{\"actionField\":{\"list\":\"\u0412\u0430\u043c \u043c\u043e\u0436\u0435\u0442 \u043f\u043e\u043d\u0440\u0430\u0432\u0438\u0442\u044c\u0441\u044f\"},\"products\":[{\"id\":\"138778\",\"name\":\"\u0412\u0438\u043d\u043e Sassi Chiusi, Bertinga, 2017\u00a0\u0433.\",\"list\":\"\",\"category\":\"\u0412\u0438\u043d\u043e\",\"variant\":\"2017\",\"price\":\"4076.00\",\"dimension3\":5,\"dimension14\":\"tonkosti-piknika|beautiful-words|pogovorim-na-vesennih-vinoprobah|darite-to-chto-khochetsya-otkryt|order-in-the-app-from-3500|order-in-the-app|uznali-chto-pyut-v-sochi|uznali-chto-pyut-v-rostove-na-donu|uznali-chto-pyut-v-ekaterinburge|uznali-chto-pyut-v-tyumeni|uznali-chto-pyut-v-moskve|personalnoe-predlozhenie-bonusy-i-skidka-na-degustatsiyu-3\",\"dimension25\":1,\"dimension13\":\"4.4\",\"dimension48\":0,\"metric1\":\"4290.00\",\"metric2\":1,\"quantity\":1}]}}}]"
+  }
+}
