@@ -63,3 +63,14 @@ test {
     systemProperties(System.getProperties())
 
 }
+task ui_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("ui")
+    }
+}
+
+task api_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("api")
+    }
+}

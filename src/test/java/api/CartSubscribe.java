@@ -3,6 +3,7 @@ package api;
 import api.model.Cart;
 import api.model.Message;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.net.URLEncoder;
@@ -17,6 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CartSubscribe extends TestBaseAPI {
 
     @Test
+    @Tag("api")
     @DisplayName("Add product to cart and check by id and quantity")
     void addProductToCart() {
         step("POST ajax/cart/add/193694/ check id and quantity", () -> {
@@ -38,6 +40,7 @@ public class CartSubscribe extends TestBaseAPI {
     }
 
     @Test
+    @Tag("api")
     @DisplayName("Clear cart")
     void clearCard() {
         step("GET ajax/cart/clear/ check response model", () -> {
@@ -55,6 +58,7 @@ public class CartSubscribe extends TestBaseAPI {
     }
 
     @Test
+    @Tag("api")
     @DisplayName("Send a request for the contents of the cart")
     void returnCart() {
         step("GET ajax/cart/ check response model", () -> {
@@ -72,6 +76,7 @@ public class CartSubscribe extends TestBaseAPI {
 
 
     @Test
+    @Tag("api")
     @DisplayName("Send an email to subscribe, check the message")
     void sendEmailForSubscribe() {
         step("POST ajax/subscribe/user/ with email check message", () -> {
@@ -95,6 +100,7 @@ public class CartSubscribe extends TestBaseAPI {
     }
 
     @Test
+    @Tag("api")
     @DisplayName("Send empty email to subscribe, check the message")
     void sendEmailForSubscribeWithountEmail() {
         step("POST ajax/subscribe/user/ withount email check message", () -> {
