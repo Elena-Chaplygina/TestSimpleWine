@@ -45,7 +45,7 @@ public class Attach {
 
     public static URL getVideoUrl() {
         String videoUrl = "https://selenoid.autotests.cloud/video/" + sessionId() + ".mp4";
-//        System.out.println(sessionId());
+
         try {
             return new URL(videoUrl);
         } catch (MalformedURLException e) {
@@ -53,4 +53,11 @@ public class Attach {
         }
         return null;
     }
+
+//    public static void veryfyConsoleLog(){
+//        String consoleLogs = Attach.browserConsoleLogs();
+//        String errorText = "SEVERE";
+//
+//        assertThat(consoleLogs).doesNotContain(errorText);
+//    }
 }
