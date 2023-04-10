@@ -214,12 +214,12 @@ E --> J[envWeb=remote]
 
 ### Доска
 <p align="center">
-<img src="images/screenshots/AllureTestOpsDashboard.PNG">
+<img src="images/screenshots/AllureTestOpsDashboard.png">
 </p>
 
 ### Тест-кейсы
 <p align="center">
-<img src="images/screenshots/AllureTestCases.PNG">
+<img src="images/screenshots/AllureTestCases.png">
 </p>
 
 
@@ -230,7 +230,7 @@ E --> J[envWeb=remote]
 
 ### Запуск выбранных тестов из Allure TestOps
 <p align="center">
-<img src="images/screenshots/AllureTestOpsLaunchFromTestOps.png">
+<img src="images/screenshots/AllureTestOpsLaunches.png">
 </p>
 
 
