@@ -36,8 +36,11 @@ dependencies {
             'io.qameta.allure:allure-selenide:2.20.1',
             'org.seleniumhq.selenium:selenium-java:3.141.59',
             'io.github.bonigarcia:webdrivermanager:5.3.2',
-            'org.aeonbits.owner:owner:1.0.4'
-
+            'org.aeonbits.owner:owner:1.0.4',
+            "commons-io:commons-io:2.11.0",
+            "org.aspectj:aspectjrt:1.9.8",
+            "org.aspectj:aspectjweaver:1.9.8",
+            "io.appium:java-client:8.3.0"
     )
 
 
@@ -72,5 +75,15 @@ task ui_test(type: Test) {
 task api_test(type: Test) {
     useJUnitPlatform {
         includeTags("api")
+    }
+}
+task mobile_emulation_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("mobile_emulation")
+    }
+}
+task browserstack_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("browserstack")
     }
 }

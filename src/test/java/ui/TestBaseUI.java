@@ -1,6 +1,6 @@
 package ui;
 
-import config.WebDriverProvider;
+import drivers.WebDriverProvider;
 import helpers.Attach;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;

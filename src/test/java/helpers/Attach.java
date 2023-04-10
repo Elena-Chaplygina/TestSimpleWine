@@ -11,6 +11,7 @@ import java.nio.charset.StandardCharsets;
 
 import static com.codeborne.selenide.Selenide.sessionId;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static helpers.Browserstack.getVideoUrlBrowserStack;
 import static org.openqa.selenium.logging.LogType.BROWSER;
 
 public class Attach {
@@ -42,6 +43,14 @@ public class Attach {
                 + getVideoUrl()
                 + "' type='video/mp4'></video></body></html>";
     }
+
+    public static String addVideoForBrowserStack(String sessionId) {
+        return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
+                + getVideoUrlBrowserStack(sessionId)
+                + "' type='video/mp4'></video></body></html>";
+    }
+
+
 
     public static URL getVideoUrl() {
         String videoUrl = "https://selenoid.autotests.cloud/video/" + sessionId() + ".mp4";
