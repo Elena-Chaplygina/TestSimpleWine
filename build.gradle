@@ -87,3 +87,8 @@ task browserstack_test(type: Test) {
         includeTags("browserstack")
     }
 }
+task remote_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("remote")
+    }
+}

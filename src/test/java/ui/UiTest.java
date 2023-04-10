@@ -2,6 +2,7 @@ package ui;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.attribute;
@@ -11,7 +12,7 @@ import static io.qameta.allure.Allure.step;
 
 public class UiTest extends TestBaseUI {
     @Test
-    @Tag("ui")
+    @Tags({@Tag("ui"), @Tag("remote")})
     @DisplayName("Checking that Пользовательское соглашение и условия contain the correct link")
     void checkPopup() {
         step("Check Пользовательское соглашение и условия contain link", () -> {
@@ -23,7 +24,7 @@ public class UiTest extends TestBaseUI {
     }
 
     @Test
-    @Tag("ui")
+    @Tags({@Tag("ui"), @Tag("remote")})
     @DisplayName("There are snippets from partners' logos in the page footer")
     void footerHasSnippet() {
         step("Check partners'logo in footer page", () -> {
@@ -32,7 +33,7 @@ public class UiTest extends TestBaseUI {
     }
 
     @Test
-    @Tag("ui")
+    @Tags({@Tag("ui"), @Tag("remote")})
     @DisplayName("After clicking in the search field, a popup with recommendations appears")
     void afterClickSeachFieldShouldOpenPopup() {
         step("Check popup with recommendations appears after click search field", () -> {
@@ -41,7 +42,7 @@ public class UiTest extends TestBaseUI {
     }
 
     @Test
-    @Tag("ui")
+    @Tags({@Tag("ui"), @Tag("remote")})
     @DisplayName("After clicking on the send email button for subscription, if the field is empty, an error text appears")
     void errorMessageAppearAfterClickIfInputEmpty() {
         step("Check error message after send empty field", () -> {
@@ -51,7 +52,7 @@ public class UiTest extends TestBaseUI {
     }
 
     @Test
-    @Tag("ui")
+    @Tags({@Tag("ui"), @Tag("remote")})
     @DisplayName("After hovering over the favorites icon, a popup appears")
     void afterHoverFavoritesIconPopupAppears() {
         step("Check popup after hover the favorites icon", () -> {
