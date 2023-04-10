@@ -185,7 +185,7 @@ E --> J[envWeb=remote]
 > Сборка с параметрами позволяет перед запуском изменить параметры для сборки (путем выбора из списка или прямым указанием значения).
 
 <p align="center">
-<img src="images/screenshots/JenkinsJob.PNG"/>
+<img src="images/screenshots/JenkinsJob.png"/>
 </p>
 
 <a id="allure"></a>
@@ -222,10 +222,6 @@ E --> J[envWeb=remote]
 <img src="images/screenshots/AllureTestCases.PNG">
 </p>
 
-### Пример мануального тест-кейса
-<p align="center">
-<img src="images/screenshots/AllureTestOpsManualTest.PNG">
-</p>
 
 ### Запуски сборок
 <p align="center">
@@ -248,7 +244,7 @@ E --> J[envWeb=remote]
 ## Уведомления в Telegram с использованием бота
 
 <p>
-<img src="images/screenshots/TelegramBot.PNG">
+<img src="images/screenshots/TelegramBot.png">
 </p>
 
 <a id="video"></a>
