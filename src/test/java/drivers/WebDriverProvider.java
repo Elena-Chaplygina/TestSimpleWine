@@ -23,10 +23,6 @@ public class WebDriverProvider {
         option.addArguments("--remote-allow-origins=*");
         Configuration.browserCapabilities = option;
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of("enableVNC", true, "enableVideo", true));
-
-
         Configuration.holdBrowserOpen = true;
 
     }
