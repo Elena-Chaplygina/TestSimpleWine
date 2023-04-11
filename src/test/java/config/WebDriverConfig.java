@@ -11,7 +11,7 @@ import org.aeonbits.owner.Config;
 
 public interface WebDriverConfig extends Config {
     @Key("browser")
-    @DefaultValue("CHROME")
+    @DefaultValue("Chrome")
     String getBrowser();
 
     @Key("browserVersion")
