@@ -146,12 +146,11 @@ gradle clean clean browserstack -Denv=browserstack
 ### Удаленный запуск тестов
 
 ```
-clean test 
-  -Dbrowser=${BROWSER} 
-  -DbrowserVersion=${BROWSER_VERSION} 
-  -DbrowserSize=${BROWSER_SIZE} 
-  -DremoteUrl=${REMOTE_URL}
-  -DenvMobile=${ENV_MOBILE}
+clean remote_test
+"-Dbrowser=${BROWSER}"
+"-DbrowserVersion=${BROWSER_VERSION}"
+"-DbrowserSize=${BROWSER_SIZE}"
+"-DremoteUrl=${REMOTE_URL}"
 ```
 
 > `${BROWSER}` - наименование браузера (_по умолчанию - <code>chrome</code>_).
@@ -161,8 +160,6 @@ clean test
 > `${BROWSER_SIZE}` - размер окна браузера (_по умолчанию - <code>1980x1080</code>_).
 >
 > `${REMOTE_URL}` - адрес удаленного сервера, на котором будут запускаться тесты.
->
-> `${ENV_MOBILE}` - переменная определения среды для запуска мобильных тестов.
 
 ### Допустимые комбинации:
 ```mermaid
@@ -170,13 +167,11 @@ graph LR
 A[tag] --> B[API]
 A --> C[Web]
 A --> D[Android]
-B --> K[api_test]
-C --> E[UI_test]
-D --> G[mobile_test]
-G --> H[envMobile=emulator]
-G --> F[envMobile=mobile_bs]
-E --> I[envWeb=local]
-E --> J[envWeb=remote]
+B --> K[api]
+C --> E[ui]
+D --> G[mobile_emulation]
+D --> H[envMobile=emulator]
+G --> F[browserstack]
 ```
 
 <a id="jenkins"></a>
@@ -230,7 +225,7 @@ E --> J[envWeb=remote]
 
 ### Запуск выбранных тестов из Allure TestOps
 <p align="center">
-<img src="images/screenshots/AllureTestOpsLaunches.png">
+<img src="images/screenshots/AllureTestOpsLaunchesRun.png">
 </p>
 
 
