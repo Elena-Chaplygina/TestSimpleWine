@@ -48,7 +48,7 @@
 <a href="https://www.jenkins.io/"><img alt="Jenkins" height="50" src="images/logo/Jenkins.png" width="50"/></a>
 <a href="https://github.com/allure-framework/"><img alt="Allure Report" height="50" src="images/logo/AllureReports.png" width="50"/></a>
 <a href="https://qameta.io/"><img alt="Allure TestOps" height="50" src="images/logo/AllureTestOps.svg" width="50"/></a>
-<a href="https://www.atlassian.com/software/jira"><img alt="Jira" height="50" src="images/logo/Jira.png" width="50"/></a>  
+<a href="https://www.atlassian.com/software/jira"><img alt="Jira" height="50" src="images/logo/Jira.png" width="50"/></a>
 <a href="https://telegram.org/"><img alt="Telegram" height="50" src="images/logo/Telegram.png" width="50"/></a>
 </div>
 
@@ -170,8 +170,7 @@ A --> D[Android]
 B --> K[api]
 C --> E[ui]
 D --> G[mobile_emulation]
-D --> H[envMobile=emulator]
-G --> F[browserstack]
+D --> H[browserstack]
 ```
 
 <a id="jenkins"></a>

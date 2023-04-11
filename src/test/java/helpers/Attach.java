@@ -44,6 +44,20 @@ public class Attach {
                 + "' type='video/mp4'></video></body></html>";
     }
 
+    public static URL getVideoUrl() {
+        String videoUrl = "https://selenoid.autotests.cloud/video/" + sessionId() + ".mp4";
+        try {
+            return new URL(videoUrl);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+
+
+
     public static String addVideoForBrowserStack(String sessionId) {
         return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
                 + getVideoUrlBrowserStack(sessionId)
@@ -52,16 +66,6 @@ public class Attach {
 
 
 
-    public static URL getVideoUrl() {
-        String videoUrl = "https://selenoid.autotests.cloud/video/" + sessionId() + ".mp4";
-
-        try {
-            return new URL(videoUrl);
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 
 //    public static void veryfyConsoleLog(){
 //        String consoleLogs = Attach.browserConsoleLogs();
