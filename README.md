@@ -12,7 +12,7 @@
 * <a href="#testops">Интеграция с Jira</a>
 * <a href="#telegram">Уведомления в Telegram с использованием бота</a>
 * <a href="#video">Пример прогона теста в Selenoid</a>
-* 
+
 <a id="annotation"></a>
 ## Описание
 Разработаны UI и API тесты для web-сайта <a href="https://simplewine.ru/ ">SimpleWine</a>, и тесты для запуска на Android платформе для open source приложения <a href="https://github.com/wikimedia/apps-android-wikipedia ">Wikipedia</a>
