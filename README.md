@@ -11,7 +11,8 @@
 * <a href="#testops">Интеграция с Allure TestOps</a>
 * <a href="#testops">Интеграция с Jira</a>
 * <a href="#telegram">Уведомления в Telegram с использованием бота</a>
-
+* <a href="#video">Пример прогона теста в Selenoid</a>
+* 
 <a id="annotation"></a>
 ## Описание
 Разработаны UI и API тесты для web-сайта <a href="https://simplewine.ru/ ">SimpleWine</a>, и тесты для запуска на Android платформе для open source приложения <a href="https://github.com/wikimedia/apps-android-wikipedia ">Wikipedia</a>
@@ -242,3 +243,9 @@ D --> H[browserstack]
 
 <a id="video"></a>
 
+## Пример прогона теста в Selenoid
+
+> К каждому web-тесту в отчете прилагается видео
+<p align="center">
+  <img src="images/video/videoSelenoid.mp4">
+</p>
