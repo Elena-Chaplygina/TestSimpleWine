@@ -27,12 +27,7 @@ public class TestBaseUI {
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
                 "enableVideo", true));
-//        ChromeOptions option = new ChromeOptions();
-//        option.addArguments("--remote-allow-origins=*");
-//        Configuration.browserCapabilities = option;
-
         Configuration.browserCapabilities = capabilities;
-//        Configuration.browserCapabilities.merge(capabilities);
 
 
         open("https://simplewine.ru/");
