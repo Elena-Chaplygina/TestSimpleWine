@@ -24,10 +24,10 @@ public class TestBaseUI {
         $("[data-autotest-target-id=city-popup-city-close]").click();
     }
 
-    @BeforeEach
-    void addListener() {
-        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-    }
+  //  @BeforeEach
+    //void addListener() {
+    //    SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+//    }
 
     @AfterEach
       void addAttachments() {
