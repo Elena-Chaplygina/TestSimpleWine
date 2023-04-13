@@ -247,5 +247,5 @@ D --> H[browserstack]
 
 > К каждому web-тесту в отчете прилагается видео
 <p align="center">
-  <img src="images/video/videoSelenoid.mp4">
+  <img src="images/video/videoSelenoid.gif">
 </p>
