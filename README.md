@@ -231,7 +231,7 @@ D --> H[browserstack]
 <a id="jira"></a>
 ## Интеграция с <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-638"> Jira </a>
 <p align="center">
-<img src="images/screenshots/Jira.PNG">
+<img src="images/screenshots/Jira.png">
 </p>
 
 <a id="telegram"></a>
@@ -242,14 +242,4 @@ D --> H[browserstack]
 </p>
 
 <a id="video"></a>
-## Пример прогона теста в Selenoid
 
-> К каждому web-тесту в отчете прилагается видео
-<p align="center">
-  <img src="images/video/Video_test_rates.gif">
-</p>
-
-> В случае запуска мобильного теста с помощью Browserstack к отчету также будет прилагаться видео
-<p align="center">
-  <img src="images/video/video_mobile.gif">
-</p>
