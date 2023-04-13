@@ -24,7 +24,9 @@ public class WebDriverProvider {
         Configuration.browserCapabilities = option;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of("enableVNC", true, "enableVideo", true));
+        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                "enableVNC", true,
+                "enableVideo", true));
 
         Configuration.browserCapabilities.merge(capabilities);
 
