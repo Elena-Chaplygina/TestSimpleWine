@@ -1,5 +1,6 @@
 package ui;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import drivers.WebDriverProvider;
 import helpers.Attach;
@@ -7,7 +8,11 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import ui.page.Page;
+
+import java.util.Map;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -18,6 +23,17 @@ public class TestBaseUI {
     @BeforeAll
      static void init(){
         WebDriverProvider.initConfig();
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                "enableVNC", true,
+                "enableVideo", true));
+//        ChromeOptions option = new ChromeOptions();
+//        option.addArguments("--remote-allow-origins=*");
+//        Configuration.browserCapabilities = option;
+
+        Configuration.browserCapabilities = capabilities;
+//        Configuration.browserCapabilities.merge(capabilities);
+
 
         open("https://simplewine.ru/");
         $("[data-autotest-target-id=age-popup-btn]").click();

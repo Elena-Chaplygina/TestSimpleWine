@@ -11,6 +11,7 @@ import java.nio.charset.StandardCharsets;
 
 import static com.codeborne.selenide.Selenide.sessionId;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static com.codeborne.selenide.WebDriverRunner.source;
 import static helpers.Browserstack.getVideoUrlBrowserStack;
 import static org.openqa.selenium.logging.LogType.BROWSER;
 
