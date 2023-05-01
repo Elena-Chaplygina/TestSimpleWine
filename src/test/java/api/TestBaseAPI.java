@@ -9,11 +9,11 @@ public class TestBaseAPI {
 
 
     @BeforeAll
-    public static void getCookies(){
-    RestAssured.baseURI="https://simplewine.ru/";
+    public static void getCookies() {
+        RestAssured.baseURI = "https://simplewine.ru/";
         RestAssured.filters(withCustomTemplates());
 
-}
+    }
 
 
 }
