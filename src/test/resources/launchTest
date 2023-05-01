@@ -1,2 +1,3 @@
  ./gradlew clean test -Denv=remote
  ./gradlew clean mobile_emulation -Denv=emulation
+ ./gradlew clean browserstack -Denv=browserstack

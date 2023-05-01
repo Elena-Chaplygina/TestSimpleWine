@@ -1,19 +1,24 @@
 package helpers;
 
+import config.BrowserStackConfig;
+import org.aeonbits.owner.ConfigFactory;
+
 import static helpers.CustomApiListener.withCustomTemplates;
 import static io.restassured.RestAssured.given;
 import static java.lang.String.format;
 
 public class Browserstack {
-    // https://qaguruqaguru_cWEn5u:JrvHcugRGP42jAPdVsop@api.browserstack.com/app-automate/sessions/0bbf61520103a3f9ab6ec22b79d8d0208c2c6ff8.json
 
     public static String getVideoUrlBrowserStack(String sessionId) {
+        BrowserStackConfig config =
+                ConfigFactory.create(BrowserStackConfig.class, System.getProperties());
+
         String url = format("https://api.browserstack.com/app-automate/sessions/%s.json", sessionId);
 
         return given()
                 .log().all()
                 .filter(withCustomTemplates())
-                .auth().basic("elenachaplygina_wj2JSP", "Wpu1bycZLop4sqp9UGd8")
+                .auth().basic(config.getName(), config.getPassword())
                 .when()
                 .get(url)
                 .then()

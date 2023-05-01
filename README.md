@@ -174,7 +174,7 @@ D --> H[browserstack]
 ```
 
 <a id="jenkins"></a>
-## Запуск тестов в <a target="_blank" href="https://jenkins.autotests.cloud/job/017-Jenny_Ndbn-java-24-webinar-final-project/"> Jenkins </a>
+## Запуск тестов в <a target="_blank" href="https://jenkins.autotests.cloud/job/C17-eaach-TestSimpleWine/"> Jenkins </a>
 
 > Сборка с параметрами позволяет перед запуском изменить параметры для сборки (путем выбора из списка или прямым указанием значения).
 
@@ -183,7 +183,7 @@ D --> H[browserstack]
 </p>
 
 <a id="allure"></a>
-## Отчеты в <a target="_blank" href="https://jenkins.autotests.cloud/job/017-Jenny_Ndbn-java-24-webinar-final-project/8/allure/"> Allure report </a>
+## Отчеты в <a target="_blank" href="https://jenkins.autotests.cloud/job/C17-eaach-TestSimpleWine/46/allure/"> Allure report </a>
 
 ### Основное окно
 
@@ -204,7 +204,7 @@ D --> H[browserstack]
 </p>
 
 <a id="testops"></a>
-## Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/2083/dashboards"> Allure TestOps </a>
+## Интеграция с <a target="_blank" href="https://allure.autotests.cloud/project/2150/dashboards"> Allure TestOps </a>
 
 ### Доска
 <p align="center">

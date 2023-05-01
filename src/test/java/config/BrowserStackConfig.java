@@ -2,12 +2,11 @@ package config;
 
 import org.aeonbits.owner.Config;
 
-@MobileDriverConfig.Sources({
+@Config.Sources({
         "classpath:${env}.properties"
 })
 
-public interface MobileDriverConfig extends Config {
-
+public interface BrowserStackConfig extends Config {
 
     @Key("user")
     String getUser();
@@ -32,13 +31,5 @@ public interface MobileDriverConfig extends Config {
 
     @Key("name")
     String getName();
-
-    @Key("deviceName")
-    String deviceName();
-    @Key("appPackage")
-    String appPackage();
-    @Key("appActivity")
-    String appActivity();
-
 
 }

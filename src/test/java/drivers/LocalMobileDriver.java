@@ -1,7 +1,7 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import config.MobileDriverConfig;
+import config.EmulationConfig;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import org.aeonbits.owner.ConfigFactory;
@@ -21,15 +21,13 @@ import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
 public class LocalMobileDriver implements WebDriverProvider {
 
-    public static MobileDriverConfig config = ConfigFactory.create(MobileDriverConfig.class, System.getProperties());
-
+    public static EmulationConfig config = ConfigFactory.create(EmulationConfig.class, System.getProperties());
     public static URL getAppiumServerUrl() {
         try {
-            return new URL("http://localhost:4723/wd/hub");
+            return new URL(config.appiumServer());
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     @Nonnull
@@ -46,19 +44,13 @@ public class LocalMobileDriver implements WebDriverProvider {
                 .setApp(getAppPath())
                 .setAppPackage(config.appPackage())
                 .setAppActivity(config.appActivity());
-
-
         return new AndroidDriver(getAppiumServerUrl(), options);
-
     }
 
     private String getAppPath() {
-        String appUrl = "https://github.com/wikimedia/apps-android-wikipedia/releases/download/latest/app-alpha-universal-release.apk";
-        String appPath = "src/test/resources/apps/app-alpha-universal-release.apk";
-
-        File app = new File(appPath);
+        File app = new File(config.appPath());
         if (!app.exists()) {
-            try (InputStream in = new URL(appUrl).openStream()) {
+            try (InputStream in = new URL(config.appUrl()).openStream()) {
                 copyInputStreamToFile(in, app);
             } catch (IOException e) {
                 throw new AssertionError("Failed to download application", e);

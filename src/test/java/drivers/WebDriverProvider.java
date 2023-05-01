@@ -3,10 +3,6 @@ package drivers;
 import com.codeborne.selenide.Configuration;
 import config.WebDriverConfig;
 import org.aeonbits.owner.ConfigFactory;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-
-import java.util.Map;
 
 public class WebDriverProvider {
     public static WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
@@ -20,7 +16,7 @@ public class WebDriverProvider {
         Configuration.browserSize = config.getBrowserSize();
 
 
-        Configuration.holdBrowserOpen = true;
+//        Configuration.holdBrowserOpen = true;
 
     }
 }

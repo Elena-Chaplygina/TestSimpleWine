@@ -38,6 +38,18 @@ public class CartTest extends TestBaseAPI {
     @Test
     @DisplayName("Clear cart")
     void clearCard() {
+        step("Add product to cart", () -> {
+            String body = "quantity=1";
+            requestSpec
+                    .header("X-Requested-With", "XMLHttpRequest")
+                    .header("Referer", "https://simplewine.ru/catalog/vino/")
+                    .body(body)
+                    .when()
+                    .post("ajax/cart/add/190675/")
+                    .then()
+                    .spec(responseSpec)
+                    .log().body();
+        });
         step("GET ajax/cart/clear/ check response model", () -> {
             Cart cart = requestSpec
                     .header("X-Requested-With", "XMLHttpRequest")

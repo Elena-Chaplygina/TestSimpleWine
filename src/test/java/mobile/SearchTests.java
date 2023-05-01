@@ -32,8 +32,7 @@ public class SearchTests extends TestBaseMobile {
     @Tag("mobile_emulation")
     @DisplayName("Checking the onboarding screen")
     @Test
-    void successfulSearchTestJava1() {
-        System.out.println("");
+    void successfulSearchTest() {
         step("Check onboarding first screen", () ->
                 $(id("org.wikipedia.alpha:id/primaryTextView")).shouldBe(text("The Free Encyclopedia …in over 300 languages")));
 
@@ -65,99 +64,99 @@ public class SearchTests extends TestBaseMobile {
 
 
     @Tag("mobile_emulation")
-    @DisplayName("1")
+    @DisplayName("Checking the opening of an image from an article")
     @Test
-    void successfulSearchTestSagradaFamilia() {
+    void openImageFromArticle() {
         step("Continue onboarding first screen", () ->
                 $(id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click());
         step("Type search", () -> {
             $(accessibilityId("Search Wikipedia")).click();
             $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Sagrada Familia");
         });
-        step("", () -> {
+        step("Click title", () -> {
             $(id("org.wikipedia.alpha:id/page_list_item_title")).click();
         });
-        step("", () -> {
+        step("Click image from article", () -> {
             $(id("org.wikipedia.alpha:id/view_page_header_image")).click();
         });
-        step("", () -> {
+        step("Description text is visible", () -> {
             $(id("org.wikipedia.alpha:id/description_text")).shouldHave(visible);
         });
-        step("", () -> {
+        step("Image is visble", () -> {
             $(id("org.wikipedia.alpha:id/image")).shouldHave(visible);
         });
 
 
     }
     @Tag("mobile_emulation")
-    @DisplayName("2")
+    @DisplayName("Checking delete recent searches")
     @Test
-    void successfulSearchTestSagradaFamilia2() {
+    void deleteRecentSearches() {
         step("Continue onboarding first screen", () ->
                 $(id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click());
         step("Type search", () -> {
             $(accessibilityId("Search Wikipedia")).click();
             $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Sagrada Familia");
         });
-        step("", () -> {
+        step("Click title", () -> {
             $(id("org.wikipedia.alpha:id/page_list_item_title")).click();
         });
-        step("жмем на стрелочку", () -> {
+        step("Click on the continue button", () -> {
             $x("//android.widget.ImageButton[@content-desc=\"Navigate up\"]").click();
         });
 
-        step("жмем на крестик", () -> {
+        step("Click on the close button", () -> {
             $(id("org.wikipedia.alpha:id/search_close_btn")).click();
         });
-        step("проверка что Recent searches: виден", () -> {
+        step("Checking that Recent searches is visible", () -> {
             $(id("org.wikipedia.alpha:id/list_title")).shouldHave(text("Recent searches:"));
             $(id("org.wikipedia.alpha:id/list_title")).shouldHave(visible);
 
         });
-        step("удаление истории поиска", () -> {
+        step("Delete recent searches", () -> {
             $(id("org.wikipedia.alpha:id/recent_searches_delete_button")).click();
         });
-        step("подтверждение удаления истории поиска", () -> {
+        step("Confirmation of deleting recent searches", () -> {
             $(id("android:id/button1")).click();
         });
-        step("картинка пустого поиска видна", () -> {
+        step("Empty search image is visible", () -> {
             $(id("org.wikipedia.alpha:id/search_empty_image")).shouldHave(visible);
         });
 
 
     }
     @Tag("mobile_emulation")
-    @DisplayName("3")
+    @DisplayName("Checking recent searches after click on the button No")
     @Test
-    void successfulSearchTestSagradaFamilia3() {
+    void safeRecentSearches() {
         step("Continue onboarding first screen", () ->
                 $(id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click());
         step("Type search", () -> {
             $(accessibilityId("Search Wikipedia")).click();
             $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Sagrada Familia");
         });
-        step("", () -> {
+        step("Click title", () -> {
             $(id("org.wikipedia.alpha:id/page_list_item_title")).click();
         });
-        step("жмем на стрелочку", () -> {
+        step("Click on the continue button", () -> {
             $x("//android.widget.ImageButton[@content-desc=\"Navigate up\"]").click();
         });
 
-        step("жмем на крестик", () -> {
+        step("Click on the close button", () -> {
             $(id("org.wikipedia.alpha:id/search_close_btn")).click();
         });
-        step("проверка что Recent searches: виден", () -> {
+        step("Checking that Recent searches is visible", () -> {
             $(id("org.wikipedia.alpha:id/list_title")).shouldHave(text("Recent searches:"));
             $(id("org.wikipedia.alpha:id/list_title")).shouldHave(visible);
 
         });
-        step("удаление истории поиска", () -> {
+        step("Delete recent searches", () -> {
             $(id("org.wikipedia.alpha:id/recent_searches_delete_button")).click();
         });
-        step("подтверждение удаления истории поиска", () -> {
+        step("Opt out of  of deleting recent searches", () -> {
             $(id("android:id/button2")).click();
         });
-        step("проверка что Recent searches: виден", () -> {
+        step("Check that recent searches visible", () -> {
             $(id("org.wikipedia.alpha:id/list_title")).shouldHave(text("Recent searches:"));
             $(id("org.wikipedia.alpha:id/list_title")).shouldHave(visible);
 
@@ -165,25 +164,25 @@ public class SearchTests extends TestBaseMobile {
 
     }
     @Tag("mobile_emulation")
-    @DisplayName("4")
+    @DisplayName("Checking that Revision history")
     @Test
-    void successfulSearchTestSagradaFamilia4() {
+    void checkRevisionHistory() {
         step("Continue onboarding first screen", () ->
                 $(id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click());
         step("Type search", () -> {
             $(accessibilityId("Search Wikipedia")).click();
             $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Sagrada Familia");
         });
-        step("", () -> {
+        step("Click title", () -> {
             $(id("org.wikipedia.alpha:id/page_list_item_title")).click();
         });
-        step("жмем на три точки", () -> {
+        step("Click on option button", () -> {
             $(id("org.wikipedia.alpha:id/page_toolbar_button_show_overflow_menu")).click();
         });
-        step("выбираем пункт Edit history", () -> {
+        step("Select the item Edit history", () -> {
             $(id("org.wikipedia.alpha:id/page_view_edit_history")).click();
         });
-        step("проверка что Recent searches: виден", () -> {
+        step("Checking that revision history: is visible", () -> {
             $(id("org.wikipedia.alpha:id/articleTitleView")).shouldHave(text("Revision history: Sagrada Família"));
             $(id("org.wikipedia.alpha:id/articleTitleView")).shouldHave(visible);
 
@@ -191,18 +190,18 @@ public class SearchTests extends TestBaseMobile {
     }
 
     @Tag("mobile_emulation")
-    @DisplayName("5")
+    @DisplayName("Checking auth item")
     @Test
-    void successfulSearchTestSagradaFamilia5() {
+    void checkAuthItem() {
         step("Continue onboarding first screen", () ->
                 $(id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click());
-        step("Клик на иконку гамбургера в нижнем таббаре", () -> {
+        step("Click on the hamburger icon in the bottom tabbar", () -> {
             $(id("org.wikipedia.alpha:id/menu_icon")).click();
         });
-        step("Клик на кнопку log in ", () -> {
+        step("Click on the log in button ", () -> {
             $(id("org.wikipedia.alpha:id/main_drawer_account_avatar")).click();
         });
-        step("проверка что Create an account виден", () -> {
+        step("Checking that Create an account is visible", () -> {
             $(id("org.wikipedia.alpha:id/action_bar")).shouldHave(visible);
 
         });

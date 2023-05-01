@@ -2,14 +2,18 @@ package ui.page;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import ui.page.components.AgeGatePopUp;
 
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
-public class Page {
+public class MainPage {
 
+    private AgeGatePopUp closePopUp = new AgeGatePopUp();
+    private final String URL = "https://simplewine.ru/";
     SelenideElement searchField = $("[data-autotest-target-id=header-search-input]"),
             resultPopup = $(".result-products"),
             outClick = $(".header-search__overlay"),
@@ -19,6 +23,12 @@ public class Page {
             popupFavorite = $(".user-favorite__description");
 
     ElementsCollection snippet = $(".snippet-partners").$$(".snippet-partners__item");
+
+
+    public void openPage() {
+        open(URL);
+        closePopUp.checkGateAge();
+    }
 
     public void footerHasSnippet() {
         snippet.shouldBe(size(4));
