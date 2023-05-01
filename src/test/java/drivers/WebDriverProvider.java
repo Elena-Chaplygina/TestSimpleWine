@@ -14,9 +14,5 @@ public class WebDriverProvider {
         Configuration.browser = config.getBrowser();
         Configuration.browserVersion = config.getBrowserVersion();
         Configuration.browserSize = config.getBrowserSize();
-
-
-//        Configuration.holdBrowserOpen = true;
-
     }
 }

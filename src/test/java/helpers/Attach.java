@@ -55,23 +55,9 @@ public class Attach {
         return null;
     }
 
-
-
-
-
     public static String addVideoForBrowserStack(String sessionId) {
         return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
                 + getVideoUrlBrowserStack(sessionId)
                 + "' type='video/mp4'></video></body></html>";
     }
-
-
-
-
-//    public static void veryfyConsoleLog(){
-//        String consoleLogs = Attach.browserConsoleLogs();
-//        String errorText = "SEVERE";
-//
-//        assertThat(consoleLogs).doesNotContain(errorText);
-//    }
 }

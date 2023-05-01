@@ -12,7 +12,6 @@ import static io.appium.java_client.AppiumBy.accessibilityId;
 import static io.appium.java_client.AppiumBy.id;
 import static io.qameta.allure.Allure.step;
 
-
 public class SearchTests extends TestBaseMobile {
 
 
@@ -59,9 +58,7 @@ public class SearchTests extends TestBaseMobile {
         step("Verify search field", () ->
                 $(id("org.wikipedia.alpha:id/search_container"))
                         .isDisplayed());
-
     }
-
 
     @Tag("mobile_emulation")
     @DisplayName("Checking the opening of an image from an article")
@@ -85,9 +82,8 @@ public class SearchTests extends TestBaseMobile {
         step("Image is visble", () -> {
             $(id("org.wikipedia.alpha:id/image")).shouldHave(visible);
         });
-
-
     }
+
     @Tag("mobile_emulation")
     @DisplayName("Checking delete recent searches")
     @Test
@@ -122,9 +118,8 @@ public class SearchTests extends TestBaseMobile {
         step("Empty search image is visible", () -> {
             $(id("org.wikipedia.alpha:id/search_empty_image")).shouldHave(visible);
         });
-
-
     }
+
     @Tag("mobile_emulation")
     @DisplayName("Checking recent searches after click on the button No")
     @Test
@@ -159,10 +154,9 @@ public class SearchTests extends TestBaseMobile {
         step("Check that recent searches visible", () -> {
             $(id("org.wikipedia.alpha:id/list_title")).shouldHave(text("Recent searches:"));
             $(id("org.wikipedia.alpha:id/list_title")).shouldHave(visible);
-
         });
-
     }
+
     @Tag("mobile_emulation")
     @DisplayName("Checking that Revision history")
     @Test
@@ -185,7 +179,6 @@ public class SearchTests extends TestBaseMobile {
         step("Checking that revision history: is visible", () -> {
             $(id("org.wikipedia.alpha:id/articleTitleView")).shouldHave(text("Revision history: Sagrada Família"));
             $(id("org.wikipedia.alpha:id/articleTitleView")).shouldHave(visible);
-
         });
     }
 
@@ -206,6 +199,4 @@ public class SearchTests extends TestBaseMobile {
 
         });
     }
-
-
 }

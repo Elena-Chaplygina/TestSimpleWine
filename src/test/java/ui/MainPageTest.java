@@ -57,5 +57,4 @@ public class MainPageTest extends TestBaseUI {
             winePage.afterHoverFavoritesIconPopupAppears();
         });
     }
-
 }

@@ -20,7 +20,6 @@ public class TestBaseUI {
     MainPage winePage = new MainPage();
     LoginPage loginPage = new LoginPage();
 
-
     @BeforeAll
     static void init() {
         WebDriverProvider.initConfig();
@@ -32,7 +31,6 @@ public class TestBaseUI {
         ChromeOptions option = new ChromeOptions();
         option.addArguments("--remote-allow-origins=*");
         Configuration.browserCapabilities.merge(option);
-
     }
 
     @BeforeEach
@@ -49,5 +47,4 @@ public class TestBaseUI {
         Attach.addVideo();
         Selenide.closeWebDriver();
     }
-
 }

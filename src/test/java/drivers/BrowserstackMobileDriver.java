@@ -20,7 +20,6 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     @Nonnull
@@ -58,6 +57,5 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
         mutableCapabilities.setCapability("name", name);
 
         return new RemoteWebDriver(getAppiumServerUrk(), mutableCapabilities);
-
     }
 }

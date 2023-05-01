@@ -21,7 +21,6 @@ public class MainPage {
             msgError = $(".subscribe-input__error-message"),
             iconFavorite = $("[data-autotest-target-id=header-favorite-icon]"),
             popupFavorite = $(".user-favorite__description");
-
     ElementsCollection snippet = $(".snippet-partners").$$(".snippet-partners__item");
 
 
