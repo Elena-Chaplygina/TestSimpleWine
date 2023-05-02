@@ -7,9 +7,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static com.codeborne.selenide.Condition.attribute;
-import static com.codeborne.selenide.Selectors.withTagAndText;
-import static com.codeborne.selenide.Selenide.$;
 import static io.qameta.allure.Allure.step;
 
 @Tags({@Tag("ui"), @Tag("remote")})
@@ -21,8 +18,7 @@ public class MainPageTest extends TestBaseUI {
     @ParameterizedTest(name = "Checking that {1} contain the correct link {2}")
     void checkLink(String item, String href) {
         step("Check {1} contain link {2}", () -> {
-            $(withTagAndText("a", item))
-                    .shouldHave(attribute("href", href));
+            winePage.checkHref(item,href);
         });
     }
 
@@ -37,16 +33,25 @@ public class MainPageTest extends TestBaseUI {
     @Test
     @DisplayName("After clicking in the search field, a popup with recommendations appears")
     void afterClickSeachFieldShouldOpenPopup() {
-        step("Check popup with recommendations appears after click search field", () -> {
-            winePage.afterClickSeachFieldShouldOpenPopup();
+        step("Click on the search field", () -> {
+            winePage.searchField();
+        });
+        step("Checking that a popup has appeared", () -> {
+            winePage.checkPopUp();
+        });
+        step("Close popup", () -> {
+            winePage.closePopup();
         });
     }
 
     @Test
     @DisplayName("After clicking on the send email button for subscription, if the field is empty, an error text appears")
     void errorMessageAppearAfterClickIfInputEmpty() {
-        step("Check error message after send empty field", () -> {
-            winePage.errorMessageAppearAfterClickIfInputEmpty();
+        step("Click on send button", () -> {
+            winePage.selectBtnSubscribe();
+        });
+        step("Checking for an error message", () -> {
+            winePage.checkErrorMsg();
         });
     }
 

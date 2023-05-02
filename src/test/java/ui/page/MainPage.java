@@ -5,8 +5,8 @@ import com.codeborne.selenide.SelenideElement;
 import ui.page.components.AgeGatePopUp;
 
 import static com.codeborne.selenide.CollectionCondition.size;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selectors.withTagAndText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -33,15 +33,29 @@ public class MainPage {
         snippet.shouldBe(size(4));
     }
 
-    public void afterClickSeachFieldShouldOpenPopup() {
+    public void searchField() {
         searchField.click();
+    }
+
+    public void checkPopUp() {
         resultPopup.shouldBe(visible);
+    }
+
+    public void closePopup() {
         outClick.click();
     }
 
-    public void errorMessageAppearAfterClickIfInputEmpty() {
+    public void selectBtnSubscribe() {
         btnSubscribe.click();
+    }
+
+    public void checkErrorMsg() {
         msgError.shouldBe(visible);
+    }
+
+    public void checkHref(String btn, String link) {
+        $(withTagAndText("a", btn))
+                .shouldHave(attribute("href", link));
     }
 
     public void afterHoverFavoritesIconPopupAppears() {
@@ -49,6 +63,8 @@ public class MainPage {
         popupFavorite.shouldBe(visible);
         popupFavorite.shouldHave(text("Войдите, чтобы увидеть свои персональные скидки в каталоге."));
     }
+
+
 
 
 }

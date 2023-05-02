@@ -12,8 +12,24 @@ public class LoginTest extends TestBaseUI {
     @Test
     @DisplayName("Check login popUp")
     void checkLoginPopUp() {
-        step("Click auth item and check login popup", () -> {
-            loginPage.loginPopUp();
+        step("Open auth popup", () -> {
+            loginPage.openAuthPopup();
+        });
+        step("Check auth title", () -> {
+            loginPage.checkAuthTitle();
+        });
+    }
+    @Test
+    @DisplayName("SMS sending check")
+    void checkErrorMsg() {
+        step("Open auth popup", () -> {
+            loginPage.openAuthPopup();
+        });
+        step("Select phone number", () -> {
+            loginPage.sendPhoneNumber();
+        });
+        step("Check send sms", () -> {
+            loginPage.checkPhoneNumber();
         });
     }
 }
